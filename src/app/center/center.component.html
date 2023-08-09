@@ -9,13 +9,13 @@
       <form action="" class="form-control" style="background-color: rgba(255, 0, 0, 0.774); border-radius: 15px;" >          
         <h1 class="text-center" style="color: white;"  >Sign In </h1>
         <br>
-      <input type="text" id="u1" name="acno" (change)="acnoChange($event)"  [placeholder]="data2"  class="form-control" >
+      <input type="text"  #accno  id="u1" name="acno"  [placeholder]="data2"  class="form-control" >
       <br>
-      <input type="password" id="p1" name="psw"  (change)="passChange($event)" placeholder="password"class="form-control" >
+      <input type="password" #pswd  id="p1" name="psw"   placeholder="password"class="form-control" >
       <br>
       <br>
       <div class="p-2 text-center" > 
-      <button   (click)="login()"   class="btn btn-danger  " >Login</button>
+      <button   (click)="login( accno,pswd)" type="button"  class="btn btn-danger  " >Login</button>
       <h5  style="color: white;" >don't have an account?<a href=""   style="color: white;text-decoration: none; " >Create account</a></h5>
     </div>
     </form>

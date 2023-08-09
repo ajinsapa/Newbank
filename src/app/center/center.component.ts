@@ -15,19 +15,14 @@ constructor()
   ngOnInit():void{
 
   }
-  login(){
+  login(a:any,b:any)
+  
+  {
+    console.log(a.value);
+console.log(b.value);
+    
     alert("login clicked")
   }
-acnoChange(event:any)
-{
-  console.log(event.target.value);
-  
 }
-passChange(event:any)
-{
-  console.log(event.target.value);
-}
-}
-
 
 
