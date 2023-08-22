@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-center',
@@ -10,18 +11,26 @@ export class CenterComponent {
   data="Happy Banking with Us!!"
   data2="enter account number"
 
-constructor()
-{}
+  accno:any
+  pswd:any
+
+constructor(private rout:Router)
+{
+
+}
   ngOnInit():void{
 
   }
-  login(a:any,b:any)
+  login()
   
   {
-    console.log(a.value);
-console.log(b.value);
+    console.log(this.accno);
+    console.log(this.pswd);
+    //redirection 
     
     alert("login clicked")
+this.rout.navigateByUrl("home")
+    
   }
 }
 
